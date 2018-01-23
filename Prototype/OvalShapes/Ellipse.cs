@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Prototype
 {
     public delegate double SumDelegate();
     class Ellipse : OvalShapes, IFigure
     {
-
         protected float _x; // The x-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse.
         protected float _y; // The y-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse.
         protected static float _width;  // Width of the bounding rectangle that defines the ellipse. 
@@ -32,11 +27,11 @@ namespace Prototype
             Console.WriteLine($"A new ellipse was drawn with coodinates of an embedded rectangle - X:{_x} , Y:{_y}, Width: {_width}, Height{_height} and sum: {sum}");
         }
 
-        public double FocalLenght()
+        private double FocalLenght()
         {
             //distance of the two foci
-            double F = Math.Sqrt(Math.Pow(_width, 2) - Math.Pow(_height, 2));
-            return F;
+            double f = Math.Sqrt(Math.Pow(_width, 2) - Math.Pow(_height, 2));
+            return f;
         }
 
         public double SumBetweenPointAndAFocusAndFocalLenght()
@@ -52,8 +47,5 @@ namespace Prototype
             float area = Convert.ToSingle(Math.PI * _width * _height);
             Console.WriteLine($"The are of the ellipse is {area}");
         }
-
-
-
     }
 }

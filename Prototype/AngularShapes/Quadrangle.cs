@@ -17,9 +17,9 @@ namespace Prototype
             _vertex_coordinates_D = new Tuple<float, float>(coordinateD1, coordinateD2);
         }
 
-        public Quadrangle(float coordinateA1, float coordinateA2, float coordinateB1, float coordinateB2, float coordinateC1, float coordinateC2)
-        {
-        }
+        //public Quadrangle(float coordinateA1, float coordinateA2, float coordinateB1, float coordinateB2, float coordinateC1, float coordinateC2)
+        //{
+        //}
 
         public void Draw()
         {
@@ -27,6 +27,7 @@ namespace Prototype
             DrawLinePoint(_vertex_coordinates_B.Item1, _vertex_coordinates_C.Item1, _vertex_coordinates_B.Item2, _vertex_coordinates_C.Item2);
             DrawLinePoint(_vertex_coordinates_C.Item1, _vertex_coordinates_D.Item1, _vertex_coordinates_C.Item2, _vertex_coordinates_D.Item2);
             DrawLinePoint(_vertex_coordinates_D.Item1, _vertex_coordinates_A.Item1, _vertex_coordinates_D.Item2, _vertex_coordinates_A.Item2);
+
             Console.WriteLine($"A new quadrangle was drawn with coodinates of A: {_vertex_coordinates_A.Item1},{_vertex_coordinates_A.Item2} ; B: {_vertex_coordinates_B.Item1},{_vertex_coordinates_B.Item2} ; C: {_vertex_coordinates_C.Item1},{_vertex_coordinates_C.Item2} ; D: {_vertex_coordinates_D.Item1},D: {_vertex_coordinates_D.Item2}");
         }
     

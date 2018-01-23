@@ -15,7 +15,7 @@ namespace Prototype
             float coordinateD1 = coordinateC1 - coordinateB1 + coordinateA1;
             // from the mathematical Dy - Ay = Cy - By => Dy = Cy - By + Ay
             float coordinateD2 = coordinateC2 - coordinateB2 + coordinateA2;
-
+            // the new vertex
             _vertex_coordinates_D = new Tuple<float, float>(coordinateD1, coordinateD2);
         }
 
@@ -25,6 +25,7 @@ namespace Prototype
             DrawLinePoint(_vertex_coordinates_B.Item1, _vertex_coordinates_C.Item1, _vertex_coordinates_B.Item2, _vertex_coordinates_C.Item2);
             DrawLinePoint(_vertex_coordinates_C.Item1, _vertex_coordinates_D.Item1, _vertex_coordinates_C.Item2, _vertex_coordinates_D.Item2);
             DrawLinePoint(_vertex_coordinates_D.Item1, _vertex_coordinates_A.Item1, _vertex_coordinates_D.Item2, _vertex_coordinates_A.Item2);
+
             Console.WriteLine($"A new rectangle was drawn with coodinates of A: {_vertex_coordinates_A.Item1},{_vertex_coordinates_A.Item2} ; B: {_vertex_coordinates_B.Item1},{_vertex_coordinates_B.Item2} ; C: {_vertex_coordinates_C.Item1},{_vertex_coordinates_C.Item2} ; D: {_vertex_coordinates_D.Item1},D: {_vertex_coordinates_D.Item2}");
         }
 
@@ -33,6 +34,7 @@ namespace Prototype
             float a_side_lenght = LenghtCalculator.GetLenght(_vertex_coordinates_A.Item1, _vertex_coordinates_B.Item1, _vertex_coordinates_A.Item2, _vertex_coordinates_B.Item2);
             float b_side_lenght = LenghtCalculator.GetLenght(_vertex_coordinates_B.Item1, _vertex_coordinates_C.Item1, _vertex_coordinates_B.Item2, _vertex_coordinates_C.Item2);
             float area = a_side_lenght * b_side_lenght;
+
             Console.WriteLine($"The surface area of the triangle is {area}");
         }
     }

@@ -18,7 +18,7 @@ namespace Prototype
             float coordinateD1 = coordinateC1 - coordinateB1 + coordinateA1;
             // from the mathematical Dy - Ay = Cy - By => Dy = Cy - By + Ay
             float coordinateD2 = coordinateC2 - coordinateB2 + coordinateA2;
-
+            // the new vertex
             _vertex_coordinates_D = new Tuple<float, float>(coordinateD1, coordinateD2);
 
             _diagonal1 = d1;
@@ -31,12 +31,14 @@ namespace Prototype
             DrawLinePoint(_vertex_coordinates_B.Item1, _vertex_coordinates_C.Item1, _vertex_coordinates_B.Item2, _vertex_coordinates_C.Item2);
             DrawLinePoint(_vertex_coordinates_C.Item1, _vertex_coordinates_D.Item1, _vertex_coordinates_C.Item2, _vertex_coordinates_D.Item2);
             DrawLinePoint(_vertex_coordinates_D.Item1, _vertex_coordinates_A.Item1, _vertex_coordinates_D.Item2, _vertex_coordinates_A.Item2);
+
             Console.WriteLine($"A new rhombus was drawn with coodinates of A: {_vertex_coordinates_A.Item1},{_vertex_coordinates_A.Item2} ; B: {_vertex_coordinates_B.Item1},{_vertex_coordinates_B.Item2} ; C: {_vertex_coordinates_C.Item1},{_vertex_coordinates_C.Item2} ; D: {_vertex_coordinates_D.Item1},D: {_vertex_coordinates_D.Item2}");
         }
 
         public new void CalculateSurface()
         {
             float area = Convert.ToSingle(_diagonal1 * _diagonal2 * 0.5);
+
             Console.WriteLine($"The surface area of the rhombus is {area}");
         }
     }
