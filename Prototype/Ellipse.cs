@@ -9,12 +9,13 @@ namespace Prototype
     public delegate double SumDelegate();
     class Ellipse : OvalShapes, IFigure
     {
-        protected double _x; // The x-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse.
-        protected double _y; // The y-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse.
-        protected static double _width;  // Width of the bounding rectangle that defines the ellipse. 
-        protected static double _height; // Height of the bounding rectangle that defines the ellipse.
 
-        public Ellipse(double x, double y, double width, double height)
+        protected float _x; // The x-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse.
+        protected float _y; // The y-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse.
+        protected static float _width;  // Width of the bounding rectangle that defines the ellipse. 
+        protected static float _height; // Height of the bounding rectangle that defines the ellipse.
+
+        public Ellipse(float x, float y, float width, float height)
         {
             _x = x;
             _y = y;
@@ -46,9 +47,13 @@ namespace Prototype
             return sum;
         }
 
-        
-            
-        
+        public void CalculateSurface()
+        {
+            float area = Convert.ToSingle(Math.PI * _width * _height);
+            Console.WriteLine($"The are of the ellipse is {area}");
+        }
+
+
 
     }
 }

@@ -8,7 +8,7 @@ namespace Prototype
 {
     public class OvalShapes
     {
-        protected void DrawEllipse(double x, double y, double width, double height)
+        protected void DrawEllipse(float x, float y, float width, float height)
         {
             // Code for actual drawing the figure
             // DrawEllipse uses a rectangle to draw an ellipse defined by its upper-left corner coordinates,its height and  width.

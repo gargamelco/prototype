@@ -8,9 +8,9 @@ namespace Prototype
 {
     class Circle : Ellipse, IFigure
     {
-        private double radius;
+        private double _radius;
 
-        public Circle(double x, double y, double width, double height) 
+        public Circle(float x, float y, float width, float height) 
             : base(x, y, width, height)
         {
             _x = x;
@@ -19,7 +19,7 @@ namespace Prototype
             _height = height;
             if(_width == _height)
             {
-                radius = _width / 2;
+                _radius = _width / 2;
             }
         }
 
@@ -28,6 +28,12 @@ namespace Prototype
             DrawEllipse(_x, _y, _width, _height);
 
             Console.WriteLine($"A new circle was drawn with coodinates of an embedded rectangle - X:{_x} , Y:{_y}, Width: {_width}, Height{_height} and radius: {radius}");
+        }
+
+        public new void CalculateSurface()
+        {
+            float area = Convert.ToSingle(Math.PI * Math.Pow(_radius, 2));
+            Console.WriteLine($"The are of the circle is {area}");
         }
     }
 }
