@@ -1,0 +1,7 @@
+C:\Users\georgi.dinkov\source\repos\Prototype\Prototype\bin\Debug\Prototype.exe.config
+C:\Users\georgi.dinkov\source\repos\Prototype\Prototype\bin\Debug\Prototype.exe
+C:\Users\georgi.dinkov\source\repos\Prototype\Prototype\bin\Debug\Prototype.pdb
+C:\Users\georgi.dinkov\source\repos\Prototype\Prototype\obj\Debug\Prototype.csprojResolveAssemblyReference.cache
+C:\Users\georgi.dinkov\source\repos\Prototype\Prototype\obj\Debug\Prototype.csproj.CoreCompileInputs.cache
+C:\Users\georgi.dinkov\source\repos\Prototype\Prototype\obj\Debug\Prototype.exe
+C:\Users\georgi.dinkov\source\repos\Prototype\Prototype\obj\Debug\Prototype.pdb

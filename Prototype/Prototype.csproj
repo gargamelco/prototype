@@ -43,20 +43,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AngularShapes.cs" />
-    <Compile Include="Circle.cs" />
-    <Compile Include="Ellipse.cs" />
-    <Compile Include="Figure.cs" />
-    <Compile Include="LenghtCalculator.cs" />
-    <Compile Include="OvalShapes.cs" />
-    <Compile Include="Parallelogram.cs" />
+    <Compile Include="Modules\Shapes\AngularShapes.cs" />
+    <Compile Include="OvalShapes\Circle.cs" />
+    <Compile Include="OvalShapes\Ellipse.cs" />
+    <Compile Include="Interfaces\Figure.cs" />
+    <Compile Include="Modules\Data\LenghtCalculator.cs" />
+    <Compile Include="Modules\Shapes\OvalShapes.cs" />
+    <Compile Include="AngularShapes\Parallelogram.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Quadrangle.cs" />
-    <Compile Include="Rectangle.cs" />
-    <Compile Include="Rhombus.cs" />
-    <Compile Include="Square.cs" />
-    <Compile Include="Triangle.cs" />
+    <Compile Include="AngularShapes\Quadrangle.cs" />
+    <Compile Include="AngularShapes\Rectangle.cs" />
+    <Compile Include="AngularShapes\Rhombus.cs" />
+    <Compile Include="AngularShapes\Square.cs" />
+    <Compile Include="AngularShapes\Triangle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
