@@ -43,12 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Modules\Shapes\AngularShapes.cs" />
     <Compile Include="OvalShapes\Circle.cs" />
     <Compile Include="OvalShapes\Ellipse.cs" />
     <Compile Include="Interfaces\Figure.cs" />
     <Compile Include="Modules\Data\LenghtCalculator.cs" />
-    <Compile Include="Modules\Shapes\OvalShapes.cs" />
     <Compile Include="AngularShapes\Parallelogram.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

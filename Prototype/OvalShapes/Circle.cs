@@ -2,7 +2,7 @@
 
 namespace Prototype
 {
-    class Circle : Ellipse, IFigure
+    public class Circle : Ellipse, IFigure
     {
         protected double _radius;
 
@@ -26,11 +26,10 @@ namespace Prototype
             Console.WriteLine($"A new circle was drawn with coodinates of an embedded rectangle - X:{_x} , Y:{_y}, Width: {_width}, Height{_height} and a radius: {_radius}");
         }
 
-        public new void CalculateSurface()
+        public new float GetSurface()
         {
             float area = Convert.ToSingle(Math.PI * Math.Pow(_radius, 2));
-
-            Console.WriteLine($"The are of the circle is {area}");
+            return area;
         }
     }
 }

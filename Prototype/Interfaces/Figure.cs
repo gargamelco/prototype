@@ -3,6 +3,6 @@
     interface IFigure
     {
         void Draw();
-        void CalculateSurface();
+        float GetSurface();
     }
 }

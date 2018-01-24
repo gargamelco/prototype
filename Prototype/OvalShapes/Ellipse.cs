@@ -3,7 +3,7 @@
 namespace Prototype
 {
     public delegate double SumDelegate();
-    class Ellipse : OvalShapes, IFigure
+    public class Ellipse : IFigure
     {
         protected float _x; // The x-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse.
         protected float _y; // The y-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse.
@@ -16,6 +16,16 @@ namespace Prototype
             _y = y;
             _width = width;
             _height = height;
+        }
+
+        protected void DrawEllipse(float x, float y, float width, float height)
+        {
+            // Code for actual drawing the figure
+            // DrawEllipse uses a rectangle to draw an ellipse defined by its upper-left corner coordinates,its height and  width.
+            // Create pen.
+            // Pen blackPen = new Pen(Color.Black, 3);
+            // Draw ellipse to screen.
+            // e.Graphics.DrawEllipse(blackPen, x, y, width, height);
         }
 
         public void Draw()
@@ -42,10 +52,10 @@ namespace Prototype
             return sum;
         }
 
-        public void CalculateSurface()
+        public float GetSurface()
         {
             float area = Convert.ToSingle(Math.PI * _width * _height);
-            Console.WriteLine($"The are of the ellipse is {area}");
+            return area;
         }
     }
 }
