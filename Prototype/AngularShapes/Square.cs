@@ -2,7 +2,7 @@
 
 namespace Prototype
 {
-    class Square : Rectangle, IFigure
+    public class Square : Rectangle, IFigure
     {
         public Square(float Ax, float Ay, float Bx, float By, float Cx, float Cy)
            : base(Ax, Ay, Bx, By, Cx, Cy)
@@ -30,7 +30,7 @@ namespace Prototype
 
         public new float GetSurface()
         {
-            float a_side_lenght = LenghtCalculator.GetLenght(_vertex_A.Item1, _vertex_B.Item1, _vertex_A.Item2, _vertex_B.Item2);
+            float a_side_lenght = LenghtCalculator.GetLenght(_vertex_A, _vertex_B);
             float area = Convert.ToSingle(Math.Pow(a_side_lenght,2));
             return area;
         }

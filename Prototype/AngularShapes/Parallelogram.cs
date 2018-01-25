@@ -2,7 +2,7 @@
 
 namespace Prototype
 {
-    class Parallelogram : Quadrangle, IFigure
+    public class Parallelogram : Quadrangle, IFigure
     {
         protected float _vertical_height;
 
@@ -33,7 +33,7 @@ namespace Prototype
 
         public new float GetSurface()
         {
-            float a_side_lenght = LenghtCalculator.GetLenght(_vertex_A.Item1, _vertex_B.Item1, _vertex_A.Item2, _vertex_B.Item2);
+            float a_side_lenght = LenghtCalculator.GetLenght(_vertex_A, _vertex_B);
             float area = a_side_lenght * _vertical_height;
             return area;
         }

@@ -2,7 +2,7 @@
 
 namespace Prototype
 {
-    class Triangle : IFigure
+    public class Triangle : IFigure
     {
         protected Tuple<float, float> _vertex_A;
         protected Tuple<float, float> _vertex_B;
@@ -41,7 +41,7 @@ namespace Prototype
 
         public float GetSurface()
         {
-            float a_side_lenght = LenghtCalculator.GetLenght(_vertex_A.Item1, _vertex_B.Item1, _vertex_A.Item2, _vertex_B.Item2);
+            float a_side_lenght = LenghtCalculator.GetLenght(_vertex_A, _vertex_B);
             float area = Convert.ToSingle(a_side_lenght * _height_a * 0.5);
             return area;
         }

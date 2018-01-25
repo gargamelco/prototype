@@ -2,7 +2,7 @@
 
 namespace Prototype
 {
-    class Rhombus : Parallelogram, IFigure
+    public class Rhombus : Parallelogram, IFigure
     {
         protected float _diagonal1;
         protected float _diagonal2;

@@ -2,7 +2,7 @@
 
 namespace Prototype
 {
-    class Quadrangle : IFigure
+    public class Quadrangle : IFigure
     {
         protected Tuple<float, float> _vertex_A;
         protected Tuple<float, float> _vertex_B;

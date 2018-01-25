@@ -4,9 +4,10 @@ namespace Prototype
 {
     public static class LenghtCalculator
     {
-        public static float GetLenght(float x1, float y1, float x2, float y2)
+        public static float GetLenght(Tuple<float, float> p1, Tuple<float, float> p2)
         {
-            return Convert.ToSingle(Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2)));
+            float result = Convert.ToSingle(Math.Sqrt(Math.Pow((p1.Item1 - p2.Item1), 2) + Math.Pow((p1.Item2 - p2.Item2), 2)));
+            return result;
         }
     }
 }

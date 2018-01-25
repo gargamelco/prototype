@@ -2,7 +2,7 @@
 
 namespace Prototype
 {
-    class Rectangle : Parallelogram , IFigure
+    public class Rectangle : Parallelogram , IFigure
     {
         public Rectangle(float Ax, float Ay, float Bx, float By, float Cx, float Cy)
            : base(Ax, Ay, Bx, By, Cx, Cy, height:Convert.ToSingle(null))
@@ -29,8 +29,8 @@ namespace Prototype
 
         public new float GetSurface()
         {
-            float a_side_lenght = LenghtCalculator.GetLenght(_vertex_A.Item1, _vertex_B.Item1, _vertex_A.Item2, _vertex_B.Item2);
-            float b_side_lenght = LenghtCalculator.GetLenght(_vertex_B.Item1, _vertex_C.Item1, _vertex_B.Item2, _vertex_C.Item2);
+            float a_side_lenght = LenghtCalculator.GetLenght(_vertex_A, _vertex_B);
+            float b_side_lenght = LenghtCalculator.GetLenght(_vertex_B, _vertex_C);
             float area = a_side_lenght * b_side_lenght;
             return area;
         }
