@@ -23,7 +23,7 @@ namespace Prototype.Modules.Data
                 {
                     return new Rhombus(p1.Item1, p1.Item2, p2.Item1, p2.Item2, p3.Item1, p3.Item2, d1, d2);
                 }
-                else if(d1 == d2)
+                else
                 {
                     return new Square(p1.Item1, p1.Item2, p2.Item1, p2.Item2, p3.Item1, p3.Item2);
                 }
