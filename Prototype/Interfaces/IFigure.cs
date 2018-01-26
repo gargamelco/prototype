@@ -1,6 +1,6 @@
 ﻿namespace Prototype
 {
-    interface IFigure
+    public interface IFigure
     {
         void Draw();
         float GetSurface();

@@ -4,18 +4,18 @@ namespace Prototype
 {
     public class Quadrangle : IFigure
     {
-        protected Tuple<float, float> _vertex_A;
-        protected Tuple<float, float> _vertex_B;
-        protected Tuple<float, float> _vertex_C;
-        protected Tuple<float, float> _vertex_D;
+        protected Tuple<float, float> _vertexA;
+        protected Tuple<float, float> _vertexB;
+        protected Tuple<float, float> _vertexC;
+        protected Tuple<float, float> _vertexD;
 
         public Quadrangle(float Ax, float Ay, float Bx, float By, 
                           float Cx, float Cy, float Dx, float Dy)
         {
-            _vertex_A = new Tuple<float, float>(Ax, Ay);
-            _vertex_B = new Tuple<float, float>(Bx, By);
-            _vertex_C = new Tuple<float, float>(Cx, Cy);
-            _vertex_D = new Tuple<float, float>(Dx, Dy);
+            _vertexA = new Tuple<float, float>(Ax, Ay);
+            _vertexB = new Tuple<float, float>(Bx, By);
+            _vertexC = new Tuple<float, float>(Cx, Cy);
+            _vertexD = new Tuple<float, float>(Dx, Dy);
         }
 
 
@@ -30,17 +30,23 @@ namespace Prototype
             // e.Graphics.DrawLine(blackPen, x1, y1, x2, y2);
         }
 
-        public virtual void Draw()
+        public void Draw()
         {
-            DrawLinePoint(_vertex_A.Item1, _vertex_B.Item1, _vertex_A.Item2, _vertex_B.Item2);
-            DrawLinePoint(_vertex_B.Item1, _vertex_C.Item1, _vertex_B.Item2, _vertex_C.Item2);
-            DrawLinePoint(_vertex_C.Item1, _vertex_D.Item1, _vertex_C.Item2, _vertex_D.Item2);
-            DrawLinePoint(_vertex_D.Item1, _vertex_A.Item1, _vertex_D.Item2, _vertex_A.Item2);
+            DrawLinePoint(_vertexA.Item1, _vertexB.Item1, _vertexA.Item2, _vertexB.Item2);
+            DrawLinePoint(_vertexB.Item1, _vertexC.Item1, _vertexB.Item2, _vertexC.Item2);
+            DrawLinePoint(_vertexC.Item1, _vertexD.Item1, _vertexC.Item2, _vertexD.Item2);
+            DrawLinePoint(_vertexD.Item1, _vertexA.Item1, _vertexD.Item2, _vertexA.Item2);
+            Console.WriteLine($"A new {this.ToString()} was drawn.");
         }
     
         public virtual float GetSurface()
         {
             return 0;
+        }
+
+        public override string ToString()
+        {
+            return "quadrangle";
         }
     }
 }
