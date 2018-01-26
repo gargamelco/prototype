@@ -18,6 +18,7 @@ namespace Prototype
             _vertex_D = new Tuple<float, float>(Dx, Dy);
         }
 
+
         protected void DrawLinePoint(float x1, float y1, float x2, float y2)
         {
             // Code for actual drawing the figure
@@ -29,7 +30,7 @@ namespace Prototype
             // e.Graphics.DrawLine(blackPen, x1, y1, x2, y2);
         }
 
-        public void Draw()
+        public virtual void Draw()
         {
             DrawLinePoint(_vertex_A.Item1, _vertex_B.Item1, _vertex_A.Item2, _vertex_B.Item2);
             DrawLinePoint(_vertex_B.Item1, _vertex_C.Item1, _vertex_B.Item2, _vertex_C.Item2);
@@ -37,7 +38,7 @@ namespace Prototype
             DrawLinePoint(_vertex_D.Item1, _vertex_A.Item1, _vertex_D.Item2, _vertex_A.Item2);
         }
     
-        public float GetSurface()
+        public virtual float GetSurface()
         {
             return 0;
         }

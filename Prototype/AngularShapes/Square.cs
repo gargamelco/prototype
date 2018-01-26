@@ -19,7 +19,7 @@ namespace Prototype
             _vertex_D = new Tuple<float, float>(Dx, Dy);
         }
 
-        public new void Draw()
+        public override void Draw()
         {
             base.Draw();
             Console.WriteLine($"A new square was drawn with coodinates of " +
@@ -28,7 +28,7 @@ namespace Prototype
         }
 
 
-        public new float GetSurface()
+        public override float GetSurface()
         {
             float a_side_lenght = LenghtCalculator.GetLenght(_vertex_A, _vertex_B);
             float area = Convert.ToSingle(Math.Pow(a_side_lenght,2));

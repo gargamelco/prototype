@@ -27,7 +27,7 @@ namespace Prototype
             // e.Graphics.DrawEllipse(blackPen, x, y, width, height);
         }
 
-        public void Draw()
+        public virtual void Draw()
         {
             DrawEllipse(_x, _y, _width, _height);
 
@@ -49,7 +49,7 @@ namespace Prototype
             return Convert.ToSingle(sum);
         }
 
-        public float GetSurface()
+        public virtual float GetSurface()
         {
             float area = Convert.ToSingle(Math.PI * _width * _height);
             return area;

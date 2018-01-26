@@ -23,7 +23,7 @@ namespace Prototype
             _vertical_height = height;
         }
 
-        public new void Draw()
+        public override void Draw()
         {
             base.Draw();
             Console.WriteLine($"A new parallelogram was drawn with coodinates of " +
@@ -31,7 +31,7 @@ namespace Prototype
                               $"C: {_vertex_C.Item1},{_vertex_C.Item2} ; D: {_vertex_D.Item1},{_vertex_D.Item2}");
         }
 
-        public new float GetSurface()
+        public override float GetSurface()
         {
             float a_side_lenght = LenghtCalculator.GetLenght(_vertex_A, _vertex_B);
             float area = a_side_lenght * _vertical_height;

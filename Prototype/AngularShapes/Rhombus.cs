@@ -25,7 +25,7 @@ namespace Prototype
             _diagonal2 = d2;
         }
 
-        public new void Draw()
+        public override void Draw()
         {
             base.Draw();
             Console.WriteLine($"A new rhombus was drawn with coodinates of " +
@@ -34,7 +34,7 @@ namespace Prototype
         }
 
 
-        public new float GetSurface()
+        public override float GetSurface()
         {
             float area = Convert.ToSingle(_diagonal1 * _diagonal2 * 0.5);
             return area;
