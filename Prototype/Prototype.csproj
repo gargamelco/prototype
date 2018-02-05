@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BST\Tree.cs" />
+    <Compile Include="BST\Node.cs" />
     <Compile Include="Utilities\ConstructMechanism.cs" />
     <Compile Include="OvalShapes\Circle.cs" />
     <Compile Include="OvalShapes\Ellipse.cs" />
