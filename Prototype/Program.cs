@@ -24,14 +24,18 @@ namespace Prototype
 
             Square square = new Square(0, 5, 6, 10, 8, 12);
             square.Draw();
-            Console.WriteLine($"square's surface area is { square.GetSurface() } \n");
+            Console.WriteLine($"square's surface area is { square.GetSurface() } ");
 
-            Tree t1 = new Tree();
+            Rhombus rhombus = new Rhombus(3, 7, 2, 8, 1, 10);
+            rhombus.Draw();
+            Console.WriteLine($"rhobus's surface area is { rhombus.GetSurface() } \n");
 
-            t1.Add(ellipse.GetSurface());
-            t1.Add(circle.GetSurface());
+
+            Tree<Quadrangle> t1 = new Tree<Quadrangle>();
+
             t1.Add(parallelogram.GetSurface());
             t1.Add(square.GetSurface());
+            t1.Add(rhombus.GetSurface());
 
             Console.Write("Tree ordered ascending by shapes' surfaces : ");
             t1.InAscOrderTreeDisplay(t1.root);
@@ -41,6 +45,8 @@ namespace Prototype
 
             Console.Write("\nTree searched for surface equal to 61. Output is: ");
             Console.WriteLine(t1.FindValue(t1.root, Convert.ToSingle(61)) ? "Found" : "Not Found");
+
+
         }
     }
 }

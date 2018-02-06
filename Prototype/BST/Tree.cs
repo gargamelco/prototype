@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Prototype.BST
 {
-    public class Tree
+    public class Tree<T> where T : IFigure
     {
         public Node root;
 
@@ -17,10 +17,11 @@ namespace Prototype.BST
 
         public void Add(float value)
         {
-            Node newItem = new Node(value);
+            Node newNode = new Node(value);
+
             if (root == null)
             {
-                root = newItem;
+                root = newNode;
             }
             else
             {
@@ -37,7 +38,7 @@ namespace Prototype.BST
                         current = current.left;
                         if(current == null)
                         {
-                            parent.left = newItem;
+                            parent.left = newNode;
                         }
                     }
                     else
@@ -45,7 +46,7 @@ namespace Prototype.BST
                         current = current.right;
                         if(current == null)
                         {
-                            parent.right = newItem;
+                            parent.right = newNode;
                         }
                     }
                 }
@@ -74,16 +75,26 @@ namespace Prototype.BST
 
         public bool FindValue(Node root, float value)
         {
-            if (root != null)
+            bool found = false;
+
+            while ((root != null) && !found)
             {
-                FindValue(root.left, value);
-                FindValue(root.right, value);
-                if (root.value == value)
+                if (value < root.value)
                 {
-                    return true;
+                    root = root.left;
                 }
+                else if (value > root.value)
+                {
+                    root = root.right;
+                }
+                else
+                {
+                    found = true;
+                    break;
+                }
+                found = FindValue(root, value);
             }
-            return false;
+            return found;
         }
     }
 }
