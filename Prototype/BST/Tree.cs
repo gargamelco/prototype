@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Prototype.BST
 {
     public class Tree<T> where T : IFigure
     {
-        public Node root;
+        public Node<float> root;
 
         public Tree()
         {
@@ -17,7 +13,7 @@ namespace Prototype.BST
 
         public void Add(float value)
         {
-            Node newNode = new Node(value);
+            Node<float> newNode = new Node<float>(value);
 
             if (root == null)
             {
@@ -25,9 +21,9 @@ namespace Prototype.BST
             }
             else
             {
-                Node current = root;
+                Node<float> current = root;
 
-                Node parent = null;
+                Node<float> parent = null;
 
                 while(current != null)
                 {
@@ -53,7 +49,7 @@ namespace Prototype.BST
             }
         }
 
-        public void InAscOrderTreeDisplay(Node root)
+        public void InAscOrderTreeDisplay(Node<float> root)
         {
             if (root != null)
             {
@@ -63,7 +59,7 @@ namespace Prototype.BST
             }
         }
 
-        public void InDescOrderTreeDisplay(Node root)
+        public void InDescOrderTreeDisplay(Node<float> root)
         {
             if (root != null)
             {
@@ -73,7 +69,7 @@ namespace Prototype.BST
             }
         }
 
-        public bool FindValue(Node root, float value)
+        public bool FindValue(Node<float> root, float value)
         {
             bool found = false;
 
