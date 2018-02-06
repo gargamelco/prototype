@@ -1,11 +1,18 @@
 ﻿using System;
 
-namespace Prototype.Modules.Data
+namespace Prototype.Utilities
 {
     public static class ConstructMechanism
     {
-        public static Parallelogram GetProperFigureType(Tuple<float, float> p1, Tuple<float, float> p2, Tuple<float, float> p3, Tuple<float, float> p4)
+        public static Quadrangle GetProperFigureType(Tuple<float, float> p1, Tuple<float, float> p2, Tuple<float, float> p3)
         {
+            // from the mathematical Dx - Ax = Cx - Bx => Dx = Cx - Bx + Ax
+            float Dx = p3.Item1 - p2.Item1 + p1.Item1;
+            // from the mathematical Dy - Ay = Cy - By => Dy = Cy - By + Ay
+            float Dy = p3.Item2 - p2.Item2 + p1.Item2;
+            // the new vertex 
+            var p4 = new Tuple<float, float>(Dx, Dy);
+
             float sideA = LenghtCalculator.GetLenght(p1, p2);
             float sideB = LenghtCalculator.GetLenght(p2, p3);
             float sideC = LenghtCalculator.GetLenght(p3, p4);
@@ -26,11 +33,18 @@ namespace Prototype.Modules.Data
             }
             else if (sideA == sideC && sideB == sideD)
             {
-                return new Rectangle(p1.Item1, p1.Item2, p2.Item1, p2.Item2, p3.Item1, p3.Item2);
+                if (d1 != d2)
+                {
+                    return new Parallelogram(p1.Item1, p1.Item2, p2.Item1, p2.Item2, p3.Item1, p3.Item2, height: new Random().Next(1, 11));
+                }
+                else
+                {
+                    return new Rectangle(p1.Item1, p1.Item2, p2.Item1, p2.Item2, p3.Item1, p3.Item2);
+                }
             }
             else
             {
-                return new Parallelogram(p1.Item1, p1.Item2, p2.Item1, p2.Item2, p3.Item1, p3.Item2, height:0);
+                return new Quadrangle(p1.Item1, p1.Item2, p2.Item1, p2.Item2, p3.Item1, p3.Item2, p4.Item1, p4.Item2);
             }
         }
     }
