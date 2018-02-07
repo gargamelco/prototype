@@ -18,7 +18,6 @@ namespace Prototype
             _vertexD = new Tuple<float, float>(Dx, Dy);
         }
 
-
         protected void DrawLinePoint(float x1, float y1, float x2, float y2)
         {
             // Code for actual drawing the figure
