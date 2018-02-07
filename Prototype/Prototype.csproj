@@ -58,6 +58,7 @@
     <Compile Include="AngularShapes\Rhombus.cs" />
     <Compile Include="AngularShapes\Square.cs" />
     <Compile Include="AngularShapes\Triangle.cs" />
+    <Compile Include="Utilities\VertexCalculator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

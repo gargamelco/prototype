@@ -4,18 +4,18 @@ namespace Prototype
 {
     public class Quadrangle : IFigure
     {
-        protected Tuple<float, float> _vertexA;
-        protected Tuple<float, float> _vertexB;
-        protected Tuple<float, float> _vertexC;
-        protected Tuple<float, float> _vertexD;
+        protected Tuple<float, float> vertexA;
+        protected Tuple<float, float> vertexB;
+        protected Tuple<float, float> vertexC;
+        protected Tuple<float, float> vertexD;
 
         public Quadrangle(float Ax, float Ay, float Bx, float By, 
                           float Cx, float Cy, float Dx, float Dy)
         {
-            _vertexA = new Tuple<float, float>(Ax, Ay);
-            _vertexB = new Tuple<float, float>(Bx, By);
-            _vertexC = new Tuple<float, float>(Cx, Cy);
-            _vertexD = new Tuple<float, float>(Dx, Dy);
+            vertexA = new Tuple<float, float>(Ax, Ay);
+            vertexB = new Tuple<float, float>(Bx, By);
+            vertexC = new Tuple<float, float>(Cx, Cy);
+            vertexD = new Tuple<float, float>(Dx, Dy);
         }
 
         protected void DrawLinePoint(float x1, float y1, float x2, float y2)
@@ -31,11 +31,11 @@ namespace Prototype
 
         public void Draw()
         {
-            DrawLinePoint(_vertexA.Item1, _vertexB.Item1, _vertexA.Item2, _vertexB.Item2);
-            DrawLinePoint(_vertexB.Item1, _vertexC.Item1, _vertexB.Item2, _vertexC.Item2);
-            DrawLinePoint(_vertexC.Item1, _vertexD.Item1, _vertexC.Item2, _vertexD.Item2);
-            DrawLinePoint(_vertexD.Item1, _vertexA.Item1, _vertexD.Item2, _vertexA.Item2);
-            Console.WriteLine($"A new {this.ToString()} was drawn.");
+            DrawLinePoint(vertexA.Item1, vertexB.Item1, vertexA.Item2, vertexB.Item2);
+            DrawLinePoint(vertexB.Item1, vertexC.Item1, vertexB.Item2, vertexC.Item2);
+            DrawLinePoint(vertexC.Item1, vertexD.Item1, vertexC.Item2, vertexD.Item2);
+            DrawLinePoint(vertexD.Item1, vertexA.Item1, vertexD.Item2, vertexA.Item2);
+            Console.WriteLine($"A new { ToString() } was drawn.");
         }
     
         public virtual float GetSurface()

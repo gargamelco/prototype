@@ -6,12 +6,7 @@ namespace Prototype.Utilities
     {
         public static Quadrangle GetProperFigureType(Tuple<float, float> p1, Tuple<float, float> p2, Tuple<float, float> p3)
         {
-            // from the mathematical Dx - Ax = Cx - Bx => Dx = Cx - Bx + Ax
-            float Dx = p3.Item1 - p2.Item1 + p1.Item1;
-            // from the mathematical Dy - Ay = Cy - By => Dy = Cy - By + Ay
-            float Dy = p3.Item2 - p2.Item2 + p1.Item2;
-            // the new vertex 
-            var p4 = new Tuple<float, float>(Dx, Dy);
+            var p4 = VertexCalculator.GetVertex(p1.Item1, p1.Item2, p2.Item1, p2.Item2, p3.Item1, p3.Item2);
 
             float sideA = LenghtCalculator.GetLenght(p1, p2);
             float sideB = LenghtCalculator.GetLenght(p2, p3);

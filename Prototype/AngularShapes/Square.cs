@@ -11,7 +11,7 @@ namespace Prototype
 
         public override float GetSurface()
         {
-            float aSideLenght = LenghtCalculator.GetLenght(_vertexA, _vertexB);
+            float aSideLenght = LenghtCalculator.GetLenght(vertexA, vertexB);
             float area = Convert.ToSingle(Math.Pow(aSideLenght,2));
             return area;
         }
