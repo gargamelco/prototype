@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Prototype.BST;
 using Prototype.Utilities;
 
@@ -37,12 +38,15 @@ namespace Prototype
             Console.WriteLine($"{ figThree.ToString() }'s surface area is { figThree.GetSurface() } \n");
 
 
-            //BST initialised and operations
+            List<Quadrangle> list = new List<Quadrangle>{figOne, figTwo, figThree};
+
+            //BST initialised, filled and operated
             Tree<Quadrangle> t1 = new Tree<Quadrangle>();
 
-            t1.Add(figOne.GetSurface());
-            t1.Add(figTwo.GetSurface());
-            t1.Add(figThree.GetSurface());
+            foreach (var item in list)
+            {
+                t1.Add(item.GetSurface());
+            }
 
             Console.Write("Tree ordered ascending by shapes' surfaces : ");
             t1.InAscOrderTreeDisplay(t1.root);
