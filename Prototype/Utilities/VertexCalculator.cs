@@ -13,9 +13,9 @@ namespace Prototype.Utilities
             float Dy = Cy - By + Ay;
 
             // the new vertex 
-            var _vertexD = new Tuple<float, float>(Dx, Dy);
+            var vertexD = new Tuple<float, float>(Dx, Dy);
 
-            return _vertexD;
+            return vertexD;
         }
     }
 }
